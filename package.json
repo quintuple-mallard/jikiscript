@@ -1,0 +1,17 @@
+{
+  "name": "tool",
+  "version": "1.0.0",
+  "description": "A jikiscript interpreter and CLI",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "AGPL-3.0-only",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quintuple-mallard/jikiscript.git"
+  },
+  "bugs": {
+    "url": "https://github.com/quintuple-mallard/jikiscript/issues"
+  },
+  "homepage": "https://github.com/quintuple-mallard/jikiscript#readme"
+}
