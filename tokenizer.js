@@ -1,6 +1,9 @@
 module.exports = function tokenizer(jikiscript) {
   const tokens = [];
-  for (const char of jikiscript) {
+  let current = 0;
+
+  while (current < input.length) {
+    const char = input[current];
     if (char === "/") {
       // Handle comments
     } else if (char === '"') {
