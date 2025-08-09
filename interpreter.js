@@ -1,4 +1,12 @@
 // An interpreter for JikiScript
-module.exports = function interpret(jikiscript) {
-  return jikiscript;
+const tokenizer = require('./tokenizer')
+function interpreter(jikiscript) {
+  // const tokens = tokenizer(jikiscript);
+  console.log( jikiscript )
 }
+
+module.exports = interpreter
+// Testing it
+interpreter(
+  "log 'Hello, World'"
+)
