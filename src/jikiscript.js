@@ -8,7 +8,8 @@ class JikiScript {
    * with the user.**
    *****************/
   static runLine(line) {
-    console.log(line);
+    const tokens = JikiScript.tokenize(line)
+    console.log(tokens);
   }
 
   static interactiveMode() {
