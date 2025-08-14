@@ -51,8 +51,8 @@ class JikiScript {
     const tokens = [];
     let current = 0;
 
-    while (current < input.length) {
-      let char = input[current];
+    while (current < jiki.length) {
+      let char = jiki[current];
       throw new Error(`Unknown character ${char}`);
     }
     return tokens;
