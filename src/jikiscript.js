@@ -2,9 +2,15 @@ class JikiScript {
   static runFile(filepath) {
     // Do something with the file
   }
+  /******************
+   * This is the bit*
+   * that interacts**
+   * with the user.**
+   *****************/
   static runLine(line) {
-    console.log(line)
+    console.log(line);
   }
+
   static interactiveMode() {
     const readline = require("readline");
     const rl = readline.createInterface({
@@ -15,11 +21,11 @@ class JikiScript {
     const promptUser = () => {
       rl.question(">>> ", (line) => {
         if (!line) {
-          rl.close(); 
+          rl.close();
           return;
         }
-        JikiScript.runLine(line); 
-        promptUser(); 
+        JikiScript.runLine(line);
+        promptUser();
       });
     };
 
@@ -33,6 +39,22 @@ class JikiScript {
     else {
       JikiScript.interactiveMode();
     }
+  }
+  /**********************
+   * These functions ****
+   * work with **********
+   * the language itself*
+   *********************/
+
+  static tokenize(jiki) {
+    const tokens = [];
+    let current = 0;
+
+    while (current < input.length) {
+      let char = input[current];
+      throw new Error(`Unknown character ${char}`);
+    }
+    return tokens;
   }
 }
 JikiScript.cli();
