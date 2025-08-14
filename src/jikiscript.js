@@ -54,6 +54,7 @@ class JikiScript {
     while (current < jiki.length) {
       let char = jiki[current];
       console.error(`Unknown character "${char}"`);
+      return;
     }
     return tokens;
   }
