@@ -25,7 +25,11 @@ class JikiScript {
           rl.close();
           return;
         }
-        JikiScript.runLine(line);
+        try {
+          JikiScript.runLine(line);
+        } catch (e) {
+          console.error(e.message)
+        }
         promptUser();
       });
     };
@@ -53,8 +57,8 @@ class JikiScript {
 
     while (current < jiki.length) {
       let char = jiki[current];
-      console.error(`Unknown character "${char}"`);
-      return;
+      throw new Error(`Unknown character "${char}"`);
+      //process.exit(1)
     }
     return tokens;
   }
