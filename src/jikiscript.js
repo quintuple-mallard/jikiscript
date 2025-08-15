@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 class JikiScript {
   static runFile(filepath) {
     // Do something with the file
